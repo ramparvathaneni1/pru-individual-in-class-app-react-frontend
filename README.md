@@ -8,7 +8,6 @@
 - [Pru Individual In Class App (Backend)](https://git.generalassemb.ly/ModernEngineering/pru-individual-in-class-app)
 - [Express Backend API Lesson](https://git.generalassemb.ly/ModernEngineering/express-to-do-api)
 
-
 <br>
 
 ## Requirements
@@ -20,6 +19,8 @@ Add the following functionality to your React frontend like we did with the Todo
 3. `PUT` to update an instance of a resource
 4. `DELETE` to delete an instance of a resource
 
+You can use the [react-to-do-frontend-solution-110123](https://git.generalassemb.ly/ModernEngineering/react-todo-app-api-lesson) app for reference.
+
 <br>
 
 ## Make sure your Express Backend Application is running before proceeding with The React Frontend
@@ -27,8 +28,8 @@ Add the following functionality to your React frontend like we did with the Todo
 Go into the Express Backend application that you built last week and make sure that the server is running. `cd` into your folder and run `npm run start`. It should want to run on post `3001`. If you get an error that the port is in use, try this:
 
 ##### To stop a running port
-If you get a message that a port is in use, you can kill it with this command: `sudo kill -9 $(sudo lsof -t -i:3000)`
 
+If you get a message that a port is in use, you can kill it with this command: `sudo kill -9 $(sudo lsof -t -i:3000)`
 
 - Replace `3000` with the port number you want to stop.
 - [Reference](https://tecadmin.net/kill-process-on-specific-port/)
@@ -47,8 +48,6 @@ If you get a message that a port is in use, you can kill it with this command: `
 1. `cd` into the `react-frontend-starter` folder. You will build your app in this folder.
 1. Run `npm i` to install the packages
 1. Run `npm start` to start the server
-
-
 
 ## To submit your work
 
