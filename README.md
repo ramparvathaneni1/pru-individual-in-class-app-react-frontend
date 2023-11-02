@@ -1,12 +1,15 @@
-# Pru Individual In Class App React Frontend
+# Pru Individual In Class App React Frontend Lab
+
+## Objectives
+
+To create a React front end application that communicates with your Node Express Backend API.
 
 <br>
 
-## Links
+## Due Date
 
-- [React Frontend Connect to your Express Backend Lesson](https://git.generalassemb.ly/ModernEngineering/react-todo-app-api-lesson)
-- [Pru Individual In Class App (Backend)](https://git.generalassemb.ly/ModernEngineering/pru-individual-in-class-app)
-- [Express Backend API Lesson](https://git.generalassemb.ly/ModernEngineering/express-to-do-api)
+- Please submit a Pull Request by 3pm EST on Friday, November 3, 2023
+- Your app will be marked as "Complete" if you have the 4 routes working in the Requirement section below.
 
 <br>
 
@@ -19,7 +22,24 @@ Add the following functionality to your React frontend like we did with the Todo
 3. `PUT` to update an instance of a resource
 4. `DELETE` to delete an instance of a resource
 
-You can use the [react-to-do-frontend-solution-110123](https://git.generalassemb.ly/ModernEngineering/react-todo-app-api-lesson) app for reference.
+You can use the [react-to-do-frontend-solution-110123](https://git.generalassemb.ly/ModernEngineering/react-todo-app-api-lesson) app for reference. However, feel free to take a different approach!
+
+<br>
+
+## Optional Additional Features
+
+1. Filter Todos into 2 sections: complete and todo
+1. Implement the Finished the List! button to clear out all Todos
+1. Add the ability to update the title of a todo (you could add logic to make the title input field clickable in the UI)
+1. Use React Router to show the details for a single todo
+
+<br>
+
+## Reference Links
+
+- [React Frontend Connect to your Express Backend Lesson](https://git.generalassemb.ly/ModernEngineering/react-todo-app-api-lesson)
+- [Pru Individual In Class App (Backend)](https://git.generalassemb.ly/ModernEngineering/pru-individual-in-class-app)
+- [Express Backend API Lesson](https://git.generalassemb.ly/ModernEngineering/express-to-do-api)
 
 <br>
 
@@ -49,10 +69,16 @@ If you get a message that a port is in use, you can kill it with this command: `
 1. Run `npm i` to install the packages
 1. Run `npm start` to start the server
 
+<br>
+
 ## To submit your work
 
 [How to commit and push your work to GitHub](https://git.generalassemb.ly/ModernEngineering/getting-started-cohort-4-october-2023#to-commit-and-push-your-work-to-github)
 
+<br>
+
 ## Submit a Pull Request
+
+Please put your full name in the title of the Pull Request.
 
 [Submit a Pull Reqest](https://git.generalassemb.ly/ModernEngineering/getting-started-cohort-4-october-2023#submitting-your-work-via-pull-request)
