@@ -8,7 +8,7 @@ To create a React front end application that communicates with your Node Express
 
 ## Due Date
 
-- Please submit a Pull Request by 3pm EST on Friday, November 3, 2023
+- Please submit a Pull Request on January 23, 2024 by end of day.
 - Your app will be marked as "Complete" if you have the 4 routes working in the Requirement section below.
 
 <br>
@@ -22,13 +22,13 @@ Add the following functionality to your React frontend like we did with the Todo
 3. `PUT` to update an instance of a resource
 4. `DELETE` to delete an instance of a resource
 
-You can use the [react-to-do-frontend-solution-110123](https://git.generalassemb.ly/ModernEngineering/react-todo-app-api-lesson) app for reference. However, feel free to take a different approach!
+You can use the [solution branch](https://git.generalassemb.ly/ModernEngineering/full-stack-react/blob/solution/README.md) for reference. However, feel free to take a different approach!
 
 <br>
 
 ## Optional Additional Features
 
-1. Filter Todos into 2 sections: complete and todo
+1. Filter your fields. For example: Filtering Todos into 2 sections: complete and todo
 1. Implement the Finished the List! button to clear out all Todos
 1. Add the ability to update the title of a todo (you could add logic to make the title input field clickable in the UI)
 1. Use React Router to show the details for a single todo
@@ -37,7 +37,7 @@ You can use the [react-to-do-frontend-solution-110123](https://git.generalassemb
 
 ## Reference Links
 
-- [React Frontend Connect to your Express Backend Lesson](https://git.generalassemb.ly/ModernEngineering/react-todo-app-api-lesson)
+- [React Frontend Connect to your Express Backend Lesson](https://git.generalassemb.ly/ModernEngineering/full-stack-react/blob/main/README.md)
 - [Pru Individual In Class App (Backend)](https://git.generalassemb.ly/ModernEngineering/pru-individual-in-class-app)
 - [Express Backend API Lesson](https://git.generalassemb.ly/ModernEngineering/express-to-do-api)
 
@@ -62,7 +62,7 @@ If you get a message that a port is in use, you can kill it with this command: `
 
 1. Fork and clone down your fork of this repo using the SSH URL option under the green "Code" button. YOur URL will look similar to this: `git clone git@git.generalassemb.ly:<THIS_SHOULD_BE_YOUR_USERNAME>/pru-individual-in-class-app-react-frontend.git`.
 
-   - [You can find Fork and Clone instructions here](https://git.generalassemb.ly/ModernEngineering/getting-started-cohort-4-october-2023#fork-and-clone-lessonslabs)
+   - [You can find Fork and Clone instructions here]()
 
 1. `cd` into the `react-frontend-starter` folder. You will build your app in this folder.
 1. Run `npm i` to install the packages
@@ -72,7 +72,7 @@ If you get a message that a port is in use, you can kill it with this command: `
 
 ## To submit your work
 
-[How to commit and push your work to GitHub](https://git.generalassemb.ly/ModernEngineering/getting-started-cohort-4-october-2023#to-commit-and-push-your-work-to-github)
+[How to commit and push your work to GitHub](https://git.generalassemb.ly/ModernEngineering/start-here#faq)
 
 <br>
 
@@ -80,4 +80,4 @@ If you get a message that a port is in use, you can kill it with this command: `
 
 Please put your full name in the title of the Pull Request.
 
-[Submit a Pull Reqest](https://git.generalassemb.ly/ModernEngineering/getting-started-cohort-4-october-2023#submitting-your-work-via-pull-request)
+[Submit a Pull Reqest](https://git.generalassemb.ly/ModernEngineering/start-here#faq)
