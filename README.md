@@ -60,7 +60,7 @@ If you get a message that a port is in use, you can kill it with this command: `
 
 1. In your VM, open your Terminal and change into your Documents folder: `cd ~/mef`.
 
-1. Fork and clone down your fork of this repo using the SSH URL option under the green "Code" button. YOur URL will look similar to this: `git clone git@git.generalassemb.ly:<THIS_SHOULD_BE_YOUR_USERNAME>/pru-individual-in-class-app-react-frontend.git`.
+1. Fork and clone down your fork of this repo using the SSH URL option under the green "Code" button. Your URL will look similar to this: `git clone git@git.generalassemb.ly:<THIS_SHOULD_BE_YOUR_USERNAME>/pru-individual-in-class-app-react-frontend.git`.
 
    - [You can find Fork and Clone instructions here](https://git.generalassemb.ly/ModernEngineering/start-here#fork-and-clone-lessonslabs)
 
