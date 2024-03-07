@@ -8,7 +8,7 @@ To create a React front end application that communicates with your Node Express
 
 ## Due Date
 
-- Please submit a Pull Request on January 23, 2024 by end of day.
+- Please submit a Pull Request on March 08, 2024 by end of day.
 - Your app will be marked as "Complete" if you have the 4 routes working in the Requirement section below.
 
 <br>
@@ -58,11 +58,11 @@ If you get a message that a port is in use, you can kill it with this command: `
 
 ## To get started
 
-1. In your VM, open your Terminal and change into your Documents folder: `cd ~/Documents`.
+1. In your VM, open your Terminal and change into your Documents folder: `cd ~/mef`.
 
 1. Fork and clone down your fork of this repo using the SSH URL option under the green "Code" button. YOur URL will look similar to this: `git clone git@git.generalassemb.ly:<THIS_SHOULD_BE_YOUR_USERNAME>/pru-individual-in-class-app-react-frontend.git`.
 
-   - [You can find Fork and Clone instructions here]()
+   - [You can find Fork and Clone instructions here](https://git.generalassemb.ly/ModernEngineering/start-here#fork-and-clone-lessonslabs)
 
 1. `cd` into the `react-frontend-starter` folder. You will build your app in this folder.
 1. Run `npm i` to install the packages
@@ -72,7 +72,7 @@ If you get a message that a port is in use, you can kill it with this command: `
 
 ## To submit your work
 
-[How to commit and push your work to GitHub](https://git.generalassemb.ly/ModernEngineering/start-here#faq)
+[How to commit and push your work to GitHub](https://git.generalassemb.ly/ModernEngineering/start-here#to-commit-and-push-your-work-to-github)
 
 <br>
 
@@ -80,4 +80,4 @@ If you get a message that a port is in use, you can kill it with this command: `
 
 Please put your full name in the title of the Pull Request.
 
-[Submit a Pull Reqest](https://git.generalassemb.ly/ModernEngineering/start-here#faq)
+[Submit a Pull Reqest](https://git.generalassemb.ly/ModernEngineering/start-here#submitting-your-work-via-pull-request)
