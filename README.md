@@ -8,12 +8,11 @@ To create a React front end application that communicates with your Node Express
 
 ## Due Date
 
-- Please submit a Pull Request on March 08, 2024 by end of day.
 - Your app will be marked as "Complete" if you have the 4 routes working in the Requirement section below.
 
 <br>
 
-## Requirements
+## Acceptance Criteria
 
 Add the following functionality to your React frontend like we did with the Todo App:
 
