@@ -92,17 +92,21 @@ function ItemList({ items }) {
   return (
     <>
       <h2>Things to do:</h2>
-      <ul>
-        {items.map((item) => (
-          <li key={item.id}>
-            {item.title}
-            &nbsp;
-            <Link to={"/bucketlist/" + item.id}>
-              <em>View/Edit</em>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {items.length <= 0 ? (
+        <p>No Items Found Matching Filter Criteria</p>
+      ) : (
+        <ul>
+          {items.map((item) => (
+            <li key={item.id}>
+              {item.title}
+              &nbsp;
+              <Link to={"/bucketlist/" + item.id}>
+                <em>View/Edit</em>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </>
   );
 }
