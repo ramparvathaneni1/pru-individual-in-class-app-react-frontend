@@ -1,7 +1,7 @@
 export default function AddItem({ handleAddItem }) {
-    const itemToAdd = {title: "", risklevel: "L", done: false};
-    
-    // Update itemToAdd when title changes
+  const itemToAdd = { title: "", risklevel: "L", done: false };
+
+  // Update itemToAdd when title changes
   const onTitleChange = (event) => {
     event.preventDefault();
     itemToAdd.title = event.target.value;
@@ -22,7 +22,7 @@ export default function AddItem({ handleAddItem }) {
   const handleFormSubmit = (event, itemToUpdate) => {
     event.preventDefault();
     handleAddItem(event, itemToUpdate);
-  }
+  };
 
   return (
     <>

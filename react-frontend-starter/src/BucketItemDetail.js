@@ -5,7 +5,7 @@ export default function BucketItemDetail({
   bucketList,
   errorMessage,
   handleEditItem,
-  handleDeleteItem
+  handleDeleteItem,
 }) {
   const { id } = useParams();
   console.log("Bucket List Item ID = ", id);
@@ -18,7 +18,7 @@ export default function BucketItemDetail({
 
   // Edit Mode = Form to Update the Item
   const [isEditMode, setEditMode] = useState(false);
-  
+
   // Used as object of the form and to send to API
   const itemToUpdate = { ...bucketItem };
 
@@ -51,13 +51,13 @@ export default function BucketItemDetail({
     event.preventDefault();
     handleEditBtnToggle(event);
     handleEditItem(event, itemToUpdate);
-  }
+  };
 
   // Get item to delete and sent to API
   const handleDeleteBtnClick = (event) => {
     event.preventDefault();
     handleDeleteItem(event, itemToUpdate);
-  }
+  };
 
   // If Item with matching ID is NOT found.
   if (!bucketItem) {
@@ -122,7 +122,6 @@ export default function BucketItemDetail({
         <button onClick={handleDeleteBtnClick}>Delete Item</button>
       </form>
     );
-
   } else {
     // When NOT in Edit Mode, Show the Details of the Item
     return (

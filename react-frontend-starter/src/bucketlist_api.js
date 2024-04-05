@@ -30,10 +30,7 @@ export async function updateBucketListItem(itemToUpdate) {
   };
 
   try {
-    const response = await fetch(
-        `${baseUrl}/${id}`,
-      options
-    );
+    const response = await fetch(`${baseUrl}/${id}`, options);
     const data = await response.json();
     console.log(`Bucket List Item (id: ${id}) Update Response: `, data);
     return data;
@@ -50,39 +47,37 @@ export async function deleteBucketListItem(id) {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
-    }
+    },
   };
 
   try {
-    const response = await fetch(
-      `${baseUrl}/${id}`,
-      options
-    );
+    const response = await fetch(`${baseUrl}/${id}`, options);
     const data = await response.json();
     console.log("BucketList Item Delete Response: ", data);
-
   } catch (error) {
     console.log(`Error deleting Bucket List Item (id: ${id}): `, error);
   }
 }
 
 export async function createNewBucketListItem(newItem) {
-    console.log("Creating new BucketList Item: ", newItem);
-    const options = {
-        method: "POST",
-        headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(newItem)
-    };
+  console.log("Creating new BucketList Item: ", newItem);
+  const options = {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newItem),
+  };
 
-    try {
-        const response = await fetch(`${baseUrl}`, options);
-        const data = await response.json();
-        console.log("BucketList Item Create Response: ", data);
-
-    } catch(error) {
-        console.log(`Error creating new BucketList Item with Title: ${newItem.title}`, error);
-    }
+  try {
+    const response = await fetch(`${baseUrl}`, options);
+    const data = await response.json();
+    console.log("BucketList Item Create Response: ", data);
+  } catch (error) {
+    console.log(
+      `Error creating new BucketList Item with Title: ${newItem.title}`,
+      error
+    );
+  }
 }
