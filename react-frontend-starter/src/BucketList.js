@@ -40,7 +40,6 @@ export default function BucketList({
 
   // Reset Filters
   const onResetBtnClick = (event) => {
-    event.preventDefault();
     console.log("Filters Reset Button Clicked");
     setFilteredList(bucketList);
   };
