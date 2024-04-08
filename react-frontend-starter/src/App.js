@@ -63,6 +63,40 @@ export default function App() {
     navigate("/bucketlist");
   }
 
+  // Mark All Done Btn Click Handler
+  async function markAllDoneBtnClick(event) {
+    event.preventDefault();
+    console.log("Mark All Done Btn clicked!");
+
+    // Call Update API on every Bucket List Item
+    const responseArr = await Promise.all(
+      bucketList.map((item) => {
+        return updateBucketListItem({ ...item, done: true });
+      })
+    );
+
+    console.log("All responses of Marking Items Done = ", responseArr);
+
+    getBucketList();
+  }
+
+  // Mark All Pending Btn Click Handler
+  async function markAllPendingBtnClick(event) {
+    event.preventDefault();
+    console.log("Mark All Pending Btn clicked!");
+
+    // Call Update API on every Bucket List Item
+    const responseArr = await Promise.all(
+      bucketList.map((item) => {
+        return updateBucketListItem({ ...item, done: false });
+      })
+    );
+
+    console.log("All responses of Marking Items Pending = ", responseArr);
+
+    getBucketList();
+  }
+
   return (
     <>
       <div>
@@ -90,7 +124,12 @@ export default function App() {
         <Route
           path="/bucketlist"
           element={
-            <BucketList bucketList={bucketList} errorMessage={errorMessage} />
+            <BucketList
+              bucketList={bucketList}
+              errorMessage={errorMessage}
+              markAllDoneBtnClick={markAllDoneBtnClick}
+              markAllPendingBtnClick={markAllPendingBtnClick}
+            />
           }
         />
         <Route

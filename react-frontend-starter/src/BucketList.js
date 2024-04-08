@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-export default function BucketList({ bucketList, errorMessage }) {
+export default function BucketList({
+  bucketList,
+  errorMessage,
+  markAllDoneBtnClick,
+  markAllPendingBtnClick
+}) {
   console.log("BucketList:: bucketList = ", bucketList);
   console.log("BucketList:: errorMessage = ", errorMessage);
 
@@ -9,16 +14,18 @@ export default function BucketList({ bucketList, errorMessage }) {
 
   console.log("BucketList:: filteredList = ", filteredList);
 
+  // Apply filters
   const applyFilters = (event) => {
     event.preventDefault();
-    const title = event.target.elements.title.value;
-    const risklevel = event.target.elements.risklevel.value;
-    const status = event.target.elements.status.value;
+    const title = event.target.form.title.value;
+    const risklevel = event.target.form.risklevel.value;
+    const status = event.target.form.status.value;
 
     console.log(
-      `Filters: title = ${title}, risklevel = ${risklevel}, status = ${status}`
+      `BucketList::Applying Filters: `, {title, risklevel, status}
     );
 
+    // Filter all the Bucket List items based on filter form values
     setFilteredList(
       bucketList.filter(
         (item) =>
@@ -31,22 +38,37 @@ export default function BucketList({ bucketList, errorMessage }) {
     );
   };
 
+  // Reset Filters
+  const onResetBtnClick = (event) => {
+    event.preventDefault();
+    console.log("Filters Reset Button Clicked");
+    setFilteredList(bucketList);
+  };
+
   useEffect(() => {
     setFilteredList(bucketList);
   }, [bucketList]);
 
   return (
     <>
-      <Filters applyFilters={applyFilters} />
+      <Filters applyFilters={applyFilters} onResetBtnClick={onResetBtnClick} />
       {errorMessage ? <p>{errorMessage}</p> : <ItemList items={filteredList} />}
+      <br />
+      <button name="all-pending-btn" onClick={markAllPendingBtnClick}>
+        Mark All Pending!
+      </button>
+      &nbsp;&nbsp;
+      <button name="all-done-btn" onClick={markAllDoneBtnClick}>
+        Mark All Done!
+      </button>
     </>
   );
 }
 
-function Filters({ applyFilters }) {
+function Filters({ applyFilters, onResetBtnClick }) {
   return (
     <div>
-      <form name="filterForm" onSubmit={applyFilters}>
+      <form name="filterForm">
         <h4>Filters:</h4>
         <label htmlFor="title">
           Title &nbsp;
@@ -55,12 +77,13 @@ function Filters({ applyFilters }) {
             id="title"
             name="title"
             placeholder="Filter by Title"
+            onChange={applyFilters}
           />
         </label>
         &nbsp;&nbsp;&nbsp;
         <label htmlFor="risklevel">
           Risk &nbsp;
-          <select id="risklevel" name="risklevel">
+          <select id="risklevel" name="risklevel" onChange={applyFilters}>
             <option default value="">
               Any
             </option>
@@ -72,7 +95,7 @@ function Filters({ applyFilters }) {
         &nbsp;&nbsp;&nbsp;
         <label htmlFor="status">
           Status?&nbsp;
-          <select id="status" name="status">
+          <select id="status" name="status" onChange={applyFilters}>
             <option default value="">
               All
             </option>
@@ -81,8 +104,7 @@ function Filters({ applyFilters }) {
           </select>
         </label>
         &nbsp;&nbsp;&nbsp;
-        <button type="reset">Reset</button>&nbsp;&nbsp;
-        <button type="submit">Apply</button>
+        <button type="reset" onClick={onResetBtnClick}>Reset</button>
       </form>
     </div>
   );
@@ -95,17 +117,32 @@ function ItemList({ items }) {
       {items.length <= 0 ? (
         <p>No Items Found Matching Filter Criteria</p>
       ) : (
-        <ul>
-          {items.map((item) => (
-            <li key={item.id}>
-              {item.title}
-              &nbsp;
-              <Link to={"/bucketlist/" + item.id}>
-                <em>View/Edit</em>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <>
+        <table>
+          <thead>
+            <tr>
+              <th>&nbsp;&nbsp;Title&nbsp;&nbsp;</th>
+              <th>&nbsp;&nbsp;Risk Level&nbsp;&nbsp;</th>
+              <th>&nbsp;&nbsp;Done?&nbsp;&nbsp;</th>
+              <th>&nbsp;&nbsp;View / Edit&nbsp;&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            {items.map((item) => (
+              <tr key={item.id}>
+                <td>{item.title}</td>
+                <td><center>{item.risklevel}</center></td>
+                <td><center>{item.done ? "Done!" : "Not Yet!"}</center></td>
+                <td><center>
+                  <Link to={"/bucketlist/" + item.id}>
+                    <em>View/Edit</em>
+                  </Link></center>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        </>
       )}
     </>
   );
